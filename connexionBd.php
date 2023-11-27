@@ -6,4 +6,7 @@
     die('Erreur : ' . $e->getMessage());
  }
  
+ if(!$connexion){
+   die('erreur de connexion');
+ }
 ?>
