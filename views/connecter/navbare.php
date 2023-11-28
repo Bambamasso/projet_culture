@@ -46,7 +46,7 @@
         </div>
         <div class="gauche">
             <ul>
-             <a href="./pageConnexion.php">Mon profile</a>
+             <a href="./profile.php">Mon profile</a>
             
             </ul>
         </div>

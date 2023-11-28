@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link type="text/css" rel="stylesheet" href="./css/navbare.css">
+    <link type="text/css" rel="stylesheet" href="./views/css/navbare.css">
 </head>
 <body>
     <nav class="nav">
@@ -46,8 +46,8 @@
         </div>
         <div class="gauche">
             <ul>
-             <a href="./pageConnexion.php">Connexion</a>
-             <a href="./pageInscription.php">Inscription</a>
+             <a href="./views/pageConnexion.php">Connexion</a>
+             <a href="./views/pageInscription.php">Inscription</a>
             </ul>
         </div>
     </nav>

@@ -21,6 +21,7 @@ require_once '../connexionBd.php';
          if($affiche){
              $_SESSION['user_id']= $affiche["id"];
             echo "validé";
+            header('LOCATION:./connecter/profile.php');
          }else{
            $message="Email ou mot de passe incorrect ";
          }
