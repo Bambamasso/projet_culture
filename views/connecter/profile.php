@@ -1,42 +1,45 @@
-<?php
-  session_start();
-  require_once '../../connexionBd.php';
-  if(!empty ($_SESSION['user_id']) && isset($_SESSION['user_id'])){
-  $utilisateur=$_SESSION['user_id'];
-  $requete='SELECT * FROM users WHERE id = :id';
- $prepareSelect=$connexion->prepare($requete);
- $prepareSelect->execute([':id'=>$utilisateur]);
- $affiche=$prepareSelect->fetch(PDO::FETCH_ASSOC);
 
-  }else{
-    header('LOCATION:../pageConnexion.php');
-  }
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link type="text/css" rel="stylesheet" href="../css/profile.css">
-</head>
-<body>
  <?php 
- require_once ('navbare.php');
+ $profile='./css/profile.css';
+ require_once ('./include/navbare.php');
  ?> 
- <section>
- <div class='profile'>
-   <div class='info'>
-      <div class="boule"><p><?php echo strtoupper(substr($affiche['full_name'],0,1))?></p></div>
-      <p>Bienvenue <?php  echo $affiche['full_name']; ?></p>
-     <div class="bouton">
-        <button><a href="#">Modifier le profile</a></button>
-        <button><a href="deconnexion.php">Deconnexion</a></button>
-     </div>
-   </div>
- </section>
 
-</div> 
-</body>
-</html>
+
+ <section class="profile-info">
+
+ <!-- <h2>Informations personnelles</h2>
+    <p>Nom: Nom de l'utilisateur</p>
+    <p>Email: email@utilisateur.com</p> -->
+
+  <div class="profile">
+    <div class="cardre">
+
+      <div class="gauche">
+        <div> <img src="./image/téléchargement.png" alt="cgn"></div>
+      </div>
+      <div  class="droite">
+        <h1>Mes information</h1>
+        <div>
+        <p class="p">Nom : </p>
+        <p> <?php  echo $affiche['full_name']; ?></p>
+        </div>
+        <div>
+          <p class="p">Email : </p>
+          <p><?php echo $affiche['email']; ?></p>
+      </div>
+        
+
+      </div>
+      </div>
+    <div class="bouton">
+     <button><a href="">Modifier mes information</a></button>
+     <button><a href="./deconnexion.php">Deconnexion</a></button>
+    </div>
+  </div>
+ 
+</section>
+
+<!-- Ajoutez d'autres sections selon vos besoins -->
+
+<?php require_once ('./include/footer.php'); ?>

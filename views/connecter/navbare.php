@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav class="nav">
-     <div class="onglets">
+     
          <p class="logo" >Logo</p>
            <input type="checkbox" id="barre">
            <label for="barre">Menu</label>
@@ -40,16 +40,16 @@
                         </ul>
   
                     </li>
-  
+                    <li class="point"> <a href="./profile.php">Mon profile</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="gauche">
+       
+        <!-- <div class="gauche">
             <ul>
-             <a href="./profile.php">Mon profile</a>
+            
             
             </ul>
-        </div>
+        </div> -->
     </nav>
 </body>
 </html>

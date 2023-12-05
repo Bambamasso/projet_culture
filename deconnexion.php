@@ -1,6 +1,6 @@
 <?php
  session_start();
- require_once '../../connexionBd.php';
+ require_once './connexionBd.php';
  if(!empty ($_SESSION['user_id']) && isset($_SESSION['user_id'])){
 
  $utilisateur=$_SESSION['user_id'];
@@ -12,11 +12,13 @@
 
  if($prepareSelect){
   unset($_SESSION['user_id']);
- header ('LOCATION:../pageConnexion.php');
+ header ('LOCATION:./pageConnexion.php');
 
  }else{
-    header ('LOCATION:../pageConnexion.php');
+    header ('LOCATION:./pageConnexion.php');
  }
 
+ }else{
+   header ('LOCATION:./pageConnexion.php');
  }
 ?>                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

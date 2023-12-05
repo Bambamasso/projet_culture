@@ -10,6 +10,6 @@
 
 </head>
 <body>
-    <?php  require_once ('navbare.php');?>
-</body>
-</html>
+    <?php  require_once ('./include/navbare.php' );?>
+
+ <?php  require_once ('./include/footer.php' );?>

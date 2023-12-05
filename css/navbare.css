@@ -12,7 +12,7 @@ box-sizing: border-box;
 .nav{width: 100%;
     display: flex;
     position: fixed;
-     justify-content: space-between; 
+      justify-content: space-between; 
     align-items: center;
     background:#014108;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; 
@@ -27,7 +27,7 @@ box-sizing: border-box;
 }
 /* .onglets .droit*/
 
-.onglets .logo{
+nav .logo{
     color: white;
     font-size: 25px;
     margin-left: 10px;
@@ -42,8 +42,9 @@ box-sizing: border-box;
    float: left;
 }
 .droit ul li a{
-    font-size: 20px;
-    padding: 20px;
+    font-size: 18px;
+    padding: 10px;
+    margin-left: 15px;
     display: block;
 }
 .droit a{
@@ -107,22 +108,53 @@ box-sizing: border-box;
 #barre{
     display: none;
 }
-.onglets label{
+nav label{
     cursor: pointer;
     display: none;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Inter', sans-serif;
 
 }
+.point a{
+    color: white;
+}
+.point a:hover{
+    border-bottom: none;  
+}
+.buton:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EFFD86;
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 2px;
+    transition: 1.5s;
+   
+}
+.buton a{
+    color: white;
+    font-size: 10px;
+  
+}
+
+.buton a:hover{
+  border-bottom: none;  
+}
+
+.buton a:hover{
+
+    border-bottom: none;  
+  }
 /* responsivité */
 
 @media(max-width:947px){
   
-    .onglets label{
+    nav label{
         display: block;
     } 
-    .onglets .droit{
+    nav .droit{
         position: absolute;
         top: 100%;
         left: 0px;
@@ -131,18 +163,18 @@ box-sizing: border-box;
         display: none;
     }
 
-    .onglets .droit ul li{
+    nav .droit ul li{
         width: 100%;
     }
-    .onglets .droit ul li ul{
+    nav .droit ul li ul{
         position: relative;
         width: 100%;
     }
     
-    .onglets .droit ul li ul li{
+    nav .droit ul li ul li{
        background: #8AEC89;
     }
-    .onglets .droit ul li ul li ul{
+    nav .droit ul li ul li ul{
         width: 100%;
         left: 0;
      }
