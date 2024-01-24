@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-require_once('connexionBd.php');
+if (isset($_GET['message'])) {
+  echo '<script>alert("' . htmlspecialchars($_GET['message']) . '");</script>';}
+ require_once('connexionBd.php');
 
  if(!empty($_POST['email']) && !empty($_POST['password']) ){
     $email=$_POST['email'];

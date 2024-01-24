@@ -56,14 +56,10 @@
                         <div class="group">
                             <input type="submit" class="button" value="S'inscrire">
                         </div>
-                      
                     </div>
                </form>
-
             </div>
-     
         </div>
     </div>
-   
 </body>
 </html>

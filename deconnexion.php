@@ -18,7 +18,8 @@
     header ('LOCATION:./pageConnexion.php');
  }
 
- }else{
-   header ('LOCATION:./pageConnexion.php');
  }
+//  else{
+//    header ('LOCATION:./pageConnexion.php');
+//  }
 ?>                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

@@ -2,44 +2,88 @@
 
  <?php 
  $profile='./css/profile.css';
- require_once ('./include/navbare.php');
+ require_once ('./include/navConnect.php');
  ?> 
 
 
  <section class="profile-info">
 
- <!-- <h2>Informations personnelles</h2>
-    <p>Nom: Nom de l'utilisateur</p>
-    <p>Email: email@utilisateur.com</p> -->
+  <main>
+    
+    <div class="profile">
+     <?php if(!empty($affiche['picture'])): ?>
+        <h3>Profile</h3>
+        
+        <img src="./image/<?php echo $affiche['picture']?>" alt="">
 
-  <div class="profile">
-    <div class="cardre">
+        <?php else:?>
+          <img src="./image/21104.png" alt="">
+     <?php endif; ?>
 
-      <div class="gauche">
-        <div> <img src="./image/téléchargement.png" alt="cgn"></div>
-      </div>
-      <div  class="droite">
-        <h1>Mes information</h1>
+     <div class="info">
+        <h4>Mes information</h4>
+          
         <div>
-        <p class="p">Nom : </p>
-        <p> <?php  echo $affiche['full_name']; ?></p>
+          <p class="p">Nom</p>
+          <p><?php echo $affiche['full_name']?></p>
         </div>
         <div>
-          <p class="p">Email : </p>
-          <p><?php echo $affiche['email']; ?></p>
-      </div>
+          <p class="p">Email</p>
+          <p><?php echo $affiche['email']?></p>
+        </div>
+         <!-- <div>
+          <p class="p">Email</p>
+          <p></p>
+        </div> -->
         
-
       </div>
-      </div>
-    <div class="bouton">
-     <button><a href="">Modifier mes information</a></button>
-     <button><a href="./deconnexion.php">Deconnexion</a></button>
+    <div class="button">
+      <button><a href="./deconnexion.php">Deconnexion</a></button>
+      <button id="openModalBtn" >Modifier mes information</button>
     </div>
-  </div>
+
+
+   
+    </div>
+    </div>
+
+    <div id="myModal" class='modal'>
+      <div class="modal-content">
+        <span class="close" id="closeModalBtn">&times;</span>
+        <form action="" method="post"  enctype="multipart/form-data">
+          <h4>Modifier mes informations</h4>
+          
+          <div class="group">
+            <label for="">Full name</label>
+            <input type="text" name="name" class="email"value="<?php echo $affiche['full_name']?>" >
+          </div>
+          <div class="group">
+            <label for="">Ajouter une photos</label>
+            <input type="file" name="img" class="email" value="Ajouter une photos">
+          </div>
+
+          <div class="group">
+              <label for="">Mote de passe</label>
+              <input type="password" name="password" class="password" value="<?php echo $affiche['password']?>">
+          </div>
+
+          <!-- <div class="group">
+              <label for="">Confirmer mot de passe</label>
+              <input type="password" name="confirmation" class="confirmation">
+          </div> -->
+          <input type="submit" value="Enregistrer">
+        </form>
+        
+      </div>
+
+    </div>
+
+  </main> 
  
 </section>
 
 <!-- Ajoutez d'autres sections selon vos besoins -->
 
-<?php require_once ('./include/footer.php'); ?>
+<?php require_once ('./include/footer.php');
+ 
+?>

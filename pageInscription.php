@@ -23,7 +23,7 @@
      }
      if(!isset( $erreur_fullName) && !isset( $erreur_email) && !isset( $erreur_password)&& !isset( $erreur_cPassword) ){
 
-        require_once '../connexionBd.php';
+        require_once './connexionBd.php';
 
         $requet="SELECT * FROM users WHERE email=:email";
         $prepareSelect=$connexion->prepare($requet);
@@ -38,7 +38,7 @@
            $prepareInsert=$connexion->prepare($requet);
            $prepareInsert->execute([':full_name'=>$full_name, ':email'=>$email, ':password'=>$password]);
            if($prepareInsert){
-           header('LOCATION:pageConnexion.php');
+           header("LOCATION:pageConnexion.php?message=l'inscription est un succès");
            }
         }
      }
